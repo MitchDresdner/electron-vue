@@ -35,10 +35,10 @@
   </div>
 </template>
 <script>
-// import BootstrapVueTable from 'vue-bootstrap-table'
+import VueBootstrapTable from 'vue2-bootstrap-table2/dist/vue-bootstrap-table'
 
 export default {
-  name: 'sandybox-page',
+  name: 'table-page',
   components: {
     VueBootstrapTable: VueBootstrapTable
   },

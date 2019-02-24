@@ -2,6 +2,12 @@
 
 import { app, BrowserWindow } from 'electron'
 
+const Conf = require('electron-store')
+const config = new Conf()
+
+config.set('foo.bar', 'baz')
+console.log('Conf param is in ' + app.getPath('userData') + ' ' + config.get('foo.bar'))
+
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
