@@ -1,6 +1,6 @@
 # electron-vue
+Template repo for VueJS and Electron intergration
 
-> An electron-vue project
 
 #### Build Setup
 
