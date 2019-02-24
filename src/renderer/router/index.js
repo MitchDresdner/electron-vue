@@ -10,6 +10,16 @@ export default new Router({
     component: require('@/components/LandingPage').default
   },
   {
+    path: '/sandybox',
+    name: 'sandybox-page',
+    component: require('@/components/SandboxPage').default
+  },
+  {
+    path: '/table',
+    name: 'table-page',
+    component: require('@/components/TablePage').default
+  },
+  {
     path: '/about',
     name: 'about-page',
     component: require('@/components/AboutPage').default

@@ -9,6 +9,8 @@
         <b-collapse is-nav id="nav_collapse">
           <b-navbar-nav>
             <b-nav-item to="/">Home</b-nav-item>
+            <b-nav-item to="sandybox">Sandbox</b-nav-item>
+            <b-nav-item to="table">Table</b-nav-item>
             <b-nav-item to="about">About</b-nav-item>
             <b-nav-item href="#" disabled>Disabled</b-nav-item>
           </b-navbar-nav>
