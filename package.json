@@ -57,6 +57,7 @@
     "bootstrap-vue": "^2.0.0-rc.13",
     "clean-css": "^4.1.11",
     "conf": "^2.2.0",
+    "d3": "^5.9.1",
     "electron-store": "^2.0.0",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
