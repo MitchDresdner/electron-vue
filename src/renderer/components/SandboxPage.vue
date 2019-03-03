@@ -71,6 +71,9 @@
 </template>
 
 <script>
+
+import { ipcRenderer } from 'electron'
+
 export default {
   name: 'sandybox-page',
   data () {
@@ -79,6 +82,17 @@ export default {
       posts: [],
       errors: []
     }
+  },
+  mounted () {
+    setInterval(() => {
+      // this.$electron.ipcRenderer.send('ping')
+      ipcRenderer.send('ping')
+    }, 1000)
+
+    this.$electron.ipcRenderer.on('pong', (event, data) => {
+      this.myDataVar = data
+      console.log(data)
+    })
   }
 }
 </script>
