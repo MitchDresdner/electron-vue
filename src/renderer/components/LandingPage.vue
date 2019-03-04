@@ -23,6 +23,7 @@
           <div class="title alt">Other Documentation</div>
           <button class="alt" @click="open('https://electron.atom.io/docs/')">Electron</button>
           <button class="alt" @click="open('https://vuejs.org/v2/guide/')">Vue.js</button>
+          <button class="alt" @click="dispatchAction">Dispatch.me {{foo}}</button>
         </div>
       </div>
     </main>
@@ -35,9 +36,25 @@
   export default {
     name: 'landing-page',
     components: { SystemInformation },
+    data () {
+      return {
+        foo: 0
+      }
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
+      },
+      dispatchAction: function() {
+        console.log('42')
+        this.$store.dispatch('someAsyncTask')
+        this.foo++;
+        this.$store.dispatch('getCounter').then(function(value) {
+            console.log('got ' + value)
+            var bar = value
+            // this.foo = value
+        })
+        console.log('done')
       }
     }
   }

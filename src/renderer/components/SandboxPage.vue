@@ -73,17 +73,20 @@
 <script>
 
 import { ipcRenderer } from 'electron'
+// import state from '../store/Counter'
 
 export default {
   name: 'sandybox-page',
   data () {
     return {
       notifications: 42,
+      myXDataVar: 0,
       posts: [],
       errors: []
     }
   },
   mounted () {
+    // var foo = this.$store.state.var1;
     setInterval(() => {
       // this.$electron.ipcRenderer.send('ping')
       ipcRenderer.send('ping')
